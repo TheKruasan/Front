@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/desktop/models/bar_model.dart';
-import 'package:flutter_application_1/desktop/widgets/user_info.dart';
+import '../models/bar_model.dart';
+import 'package:ForManu/desktop/widgets/user_info.dart';
 
 
 
@@ -32,7 +32,7 @@ class _RemoteAccessState extends State<RemoteAccess> {
           children: [
             Expanded( 
               child: Container(
-              padding: EdgeInsets.only(top: 20),
+              padding: EdgeInsets.only(top: 20,bottom: 10),
               decoration: const BoxDecoration(
                 color: Color(0xff0B0C10),
                 borderRadius: BorderRadius.only(
@@ -43,7 +43,7 @@ class _RemoteAccessState extends State<RemoteAccess> {
                 child: Column(
                   children: [
                     Expanded(
-                      flex:3,
+                      flex:11,
                       child: Container(
                         child: ListView.builder(
                           itemCount: backMenuIcons.length,
@@ -63,11 +63,9 @@ class _RemoteAccessState extends State<RemoteAccess> {
                       ),
                     ),
                     Expanded( 
-                      flex: 1,
+                      flex: 4,
                       child: Container(
-                        child: Column(
-                          children: [
-                            ListView.builder(
+                            child: ListView.builder(
                               itemCount:  botMenuIcons.length,
                               itemBuilder: (context,index) {
                               return Container(
@@ -82,11 +80,10 @@ class _RemoteAccessState extends State<RemoteAccess> {
                                 ),
                               );
                             }),
-                          ],
-                        ),
+                        
                       ),
                     ),
-                    // Expanded(child: Container(child: UserInfo())),
+                    Expanded(child: Container(child: UserInfo(),padding: EdgeInsets.only(right: 8),)),
                   ],
                 ),
               ),
